@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Racing Kings historical peak rating classification.">
+
+    <title>Racing Kings historical classification</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="topbar-content">
+            <a class="logo" href="https://lichess.org">
+                lichess
+            </a>
+            <span class="topbar-divider">/</span>
+            <span class="topbar-title">Racing Kings</span>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <div>
+                <h1>Racing Kings Historical Classification</h1>
+                <p>All-time peak rating · Lichess</p>
+            </div>
+
+            <button id="refresh-button" class="button">
+                Refresh
+            </button>
+        </section>
+
+        <section class="ranking-info">
+            <span id="player-count">Loading players...</span>
+            <span id="status">Preparing classification...</span>
+        </section>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank-column">#</th>
+                        <th>Player</th>
+                        <th class="rating-column">Peak</th>
+                    </tr>
+                </thead>
+
+                <tbody id="ranking-body">
+                    <tr>
+                        <td colspan="3" class="loading">
+                            Loading classification...
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p id="last-update" class="last-update"></p>
+
+        <footer>
+            Data provided by
+            <a href="https://lichess.org" target="_blank" rel="noopener noreferrer">
+                Lichess
+            </a>
+            · Racing Kings
+        </footer>
+
+    </main>
+
+</body>
+</html>

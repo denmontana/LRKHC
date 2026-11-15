@@ -1,0 +1,263 @@
+
+:root {
+    --green: #d69735;
+    --green-dark: #d69735;
+    --dark: #2e2a24;
+    --background: #f0f0f0;
+    --white: #ffffff;
+    --light-grey: #e8e8e8;
+    --text: #333333;
+    --muted: #888888;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--background);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+/* CAPÇALERA */
+
+.topbar {
+    height: 50px;
+    background: var(--dark);
+    color: white;
+}
+
+.topbar-content {
+    max-width: 1000px;
+    height: 100%;
+    margin: auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: -1.5px;
+}
+
+.topbar-divider {
+    color: #888888;
+}
+
+.topbar-title {
+    color: #dddddd;
+    font-size: 14px;
+}
+
+/* CONTINGUT */
+
+.container {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 16px;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+h1 {
+    margin: 0 0 7px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.page-heading p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* BOTÓ */
+
+.button {
+    border: none;
+    border-radius: 3px;
+    background: var(--green);
+    color: white;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: var(--green-dark);
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* INFORMACIÓ */
+
+.ranking-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    background: #e5e5e5;
+    color: #555555;
+    margin-bottom: 2px;
+}
+
+#status {
+    color: #777777;
+}
+
+/* TAULA */
+
+.table-wrapper {
+    overflow-x: auto;
+    background: var(--white);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+thead {
+    background: #dededc;
+    color: #555555;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+th {
+    padding: 12px;
+    font-weight: bold;
+}
+
+td {
+    padding: 11px 12px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+tbody tr:nth-child(even) {
+    background: #f7f7f7;
+}
+
+tbody tr:hover {
+    background: #f1e3ca;
+}
+
+.rank-column {
+    width: 65px;
+    text-align: center;
+}
+
+.rating-column {
+    width: 110px;
+    text-align: right;
+}
+
+.player-name {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.player-name:hover {
+    color: var(--green-dark);
+    text-decoration: underline;
+}
+
+.rating {
+    text-align: right;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.rank {
+    text-align: center;
+    color: #888888;
+}
+
+/* PRIMERS CLASSIFICATS */
+
+.top-three .rank {
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* MISSATGES */
+
+.loading {
+    padding: 35px;
+    text-align: center;
+    color: #888888;
+}
+
+.error-text {
+    color: #b34a3c;
+}
+
+.last-update {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* PEU DE PÀGINA */
+
+footer {
+    margin-top: 35px;
+    padding: 15px 0;
+    border-top: 1px solid #dddddd;
+    color: #999999;
+    font-size: 12px;
+}
+
+footer a {
+    color: var(--green);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* MÒBILS */
+
+@media (max-width: 600px) {
+    .container {
+        margin-top: 22px;
+    }
+
+    .page-heading {
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    .button {
+        padding: 9px 12px;
+    }
+
+    .ranking-info {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+}
